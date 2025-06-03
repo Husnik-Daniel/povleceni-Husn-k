@@ -1,0 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #fff;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: rgb(100, 200, 1);
+  margin-top: 0;
+}
+
+header, footer {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+footer p {
+  font-size: 14px;
+  color: #666;
+}
+
+main > section {
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+/* Upozornění s žlutým podkladem */
+.upozorneni {
+  background-color: #fffb8f;
+}
+
+/* Nejprodávanější produkty - světle modrý blok */
+.nejprodavanejsi {
+  background-color: #cce7ff;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Karty produktů světle růžové */
+.nejprodavanejsi > article.produkt {
+  background-color: #ffd6dc;
+  border-radius: 5px;
+  padding: 15px;
+  box-sizing: border-box;
+
+  /* Fixní rozměry karet */
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Obrázky mají pevnou velikost 300x300, zachovají poměr stran a nepřekrývají se */
+.nejprodavanejsi img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain; /* zachová poměr stran bez deformace */
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+/* Recenze mají čárkovaný rámeček */
+.recenze-karta {
+  border: 1.5px dashed #999;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Tlačítko Detail - modré s poloviční průhledností */
+.detail a {
+  display: inline-block;
+  background-color: rgba(0, 0, 255, 0.5);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.detail a:hover {
+  background-color: rgba(0, 0, 255, 0.7);
+}
+
+/* Responsivita: při menších šířkách displeje karty pod sebe */
+@media (max-width: 980px) {
+  .nejprodavanejsi {
+    justify-content: center;
+  }
+  .nejprodavanejsi > article.produkt {
+    width: 90%; /* karty zabírají téměř celou šířku */
+  }
+}
